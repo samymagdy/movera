@@ -1,0 +1,5 @@
+import { PublicContentPage } from "../../../../components/PublicContentPage";
+import { CEOMessagePage } from "../../../../components/CEOMessagePage";
+import { AboutEditorialPage } from "../../../../components/AboutEditorialPage";
+import { locales, type Locale } from "@company/contracts";
+export default async function AboutDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) { const resolved = await params; const locale = (locales.includes(resolved.locale as Locale) ? resolved.locale : "en") as Locale; const editorialSlugs = ["who-we-are", "history", "vision-mission", "leadership", "clients-certificates"]; return resolved.slug === "ceo-message" || resolved.slug === "رسالة-الرئيس-التنفيذي" || resolved.slug === "message-du-directeur-general" || resolved.slug === "bericht-van-de-algemeen-directeur" ? <CEOMessagePage initialLocale={locale} /> : editorialSlugs.includes(resolved.slug) ? <AboutEditorialPage initialLocale={locale} slug={resolved.slug} /> : <PublicContentPage initialLocale={locale} kind="pages" slug={resolved.slug} />; }

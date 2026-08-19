@@ -1,0 +1,16 @@
+{
+  "name": "@company/admin",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "start": "next start -p 3001",
+    "build": "next build",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@company/contracts": "*",
+    "next": "^16.2.11",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

@@ -1,0 +1,16 @@
+services:
+  postgres:
+    ports: !override
+      - "55440:5432"
+  redis:
+    ports: !override
+      - "56379:6379"
+  api:
+    ports: !override
+      - "4100:4000"
+  web:
+    ports: !override
+      - "3100:3000"
+  admin:
+    ports: !override
+      - "3101:3001"

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Leadership portrait placeholder</title>
+  <rect width="600" height="600" fill="#102b42"/>
+  <circle cx="300" cy="205" r="90" fill="#55d6c2"/>
+  <path d="M135 535c20-130 83-194 165-194s145 64 165 194Z" fill="#17334d" stroke="#55d6c2" stroke-width="8"/>
+  <path d="M210 215c22 30 54 45 90 45s68-15 90-45" fill="none" stroke="#07111f" stroke-width="8"/>
+</svg>

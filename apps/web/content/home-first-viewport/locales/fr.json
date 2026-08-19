@@ -1,0 +1,31 @@
+{
+  "locale": "fr",
+  "direction": "ltr",
+  "fontFamily": "Avenir Next",
+  "hero": {
+    "eyebrow": "INTELLIGENCE MOBILITÉ",
+    "title": "Mettre l’intelligence en mouvement.",
+    "desktopTitleLines": ["Mettre l’intelligence", "en mouvement"],
+    "body": "Des systèmes autonomes, des véhicules intelligents et les équipes qui font avancer la mobilité.",
+    "cta": "Explorer la plateforme mobilité",
+    "imageAlt": "Une navette autonome MOVERA circule dans une ville belge.",
+    "scrollLabel": "Faites défiler pour suivre le chemin de décision"
+  },
+  "sectors": {
+    "deliveryAdvisory": { "title": "Systèmes autonomes", "desktopTitleLines": ["Systèmes", "autonomes"], "description": "Concevoir perception, planification et contrôle pour une mobilité plus sûre." },
+    "digitalProducts": { "title": "Intelligence de flotte", "desktopTitleLines": ["Intelligence", "de flotte"], "description": "Transformer les signaux véhicule en décisions utiles." },
+    "operationalIntelligence": { "title": "Opérations de mobilité", "desktopTitleLines": ["Opérations", "de mobilité"], "description": "Coordonner véhicules, équipes et infrastructures dans un même système." }
+  },
+  "presence": { "countries": {
+      "hub-a": { "name": "Hub des systèmes de mobilité", "summary": "Intelligence véhicule", "offices": ["Systèmes autonomes", "Opérations mobilité", "Design produit mobilité"] },
+      "hub-b": { "name": "Hub des véhicules connectés", "description": "Les signaux derrière le mouvement intelligent.", "offices": ["Perception", "Intelligence de flotte", "Expérience véhicule"] },
+      "hub-c": { "name": "Laboratoire du mouvement futur", "description": "Des expériences qui passent dans le monde réel.", "offices": ["Systèmes responsables", "Simulation", "Facteurs humains"] }
+  }},
+  "impact": { "eyebrow": "VUE SYSTÈME EN DIRECT", "title": "De la perception à l’action responsable.", "metrics": {
+    "projectsDelivered": { "value": "01", "label": "Percevoir" },
+    "customerPartners": { "value": "02", "label": "Comprendre" },
+    "productsPlatforms": { "value": "03", "label": "Coordonner" },
+    "officeLocations": { "value": "04", "label": "Apprendre" },
+    "integratedSectors": { "value": "04", "label": "Apprendre" }
+  }}
+}

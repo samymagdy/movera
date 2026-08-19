@@ -1,0 +1,29 @@
+/* Keep the page canvas light so MOVERA's live field is the visual anchor. */
+.site-shell.homepage-shell {
+  background: #f7fbfe;
+}
+
+.homepage-shell .homepage-editorial-band,
+.homepage-shell .homepage-projects-band,
+.homepage-shell .homepage-careers-band,
+.homepage-shell .homepage-customer-band,
+.homepage-shell .home-newsletter,
+.homepage-shell .site-footer.public-content-footer {
+  background: rgba(247, 251, 254, .94);
+}
+
+.homepage-shell .homepage-customer-band,
+.homepage-shell .site-footer.public-content-footer {
+  background: #edf5fa;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .homepage-shell .homepage-editorial-band,
+  .homepage-shell .homepage-projects-band,
+  .homepage-shell .homepage-careers-band,
+  .homepage-shell .homepage-customer-band,
+  .homepage-shell .home-newsletter,
+  .homepage-shell .site-footer.public-content-footer {
+    background: #f7fbfe;
+  }
+}

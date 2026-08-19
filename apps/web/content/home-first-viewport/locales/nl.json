@@ -1,0 +1,31 @@
+{
+  "locale": "nl",
+  "direction": "ltr",
+  "fontFamily": "Avenir Next",
+  "hero": {
+    "eyebrow": "MOBILITEITSINTELLIGENTIE",
+    "title": "Intelligentie in beweging brengen.",
+    "desktopTitleLines": ["Intelligentie", "in beweging"],
+    "body": "Autonome systemen, intelligente voertuigen en de mensen die mobiliteit vooruithelpen.",
+    "cta": "Ontdek het mobiliteitsplatform",
+    "imageAlt": "Een autonome MOVERA-shuttle rijdt door een Belgische stad.",
+    "scrollLabel": "Scroll om het beslispad te volgen"
+  },
+  "sectors": {
+    "deliveryAdvisory": { "title": "Autonomiesystemen", "desktopTitleLines": ["Autonomie", "systemen"], "description": "Bouw perceptie, planning en controle voor veiliger bewegen." },
+    "digitalProducts": { "title": "Vlootintelligentie", "desktopTitleLines": ["Vloot", "intelligentie"], "description": "Maak van voertuigsignalen beslissingen waar mensen mee kunnen werken." },
+    "operationalIntelligence": { "title": "Mobiliteitsoperaties", "desktopTitleLines": ["Mobiliteits", "operaties"], "description": "Coördineer voertuigen, mensen en infrastructuur als één systeem." }
+  },
+  "presence": { "countries": {
+      "hub-a": { "name": "Hub voor mobiliteitssystemen", "summary": "Voertuigintelligentie", "offices": ["Autonomiesystemen", "Mobiliteitsoperaties", "Mobiliteitsproductontwerp"] },
+      "hub-b": { "name": "Hub voor verbonden voertuigen", "description": "De signalen achter intelligente beweging.", "offices": ["Perceptie", "Vlootintelligentie", "Voertuigervaring"] },
+      "hub-c": { "name": "Laboratorium voor toekomstige mobiliteit", "description": "Experimenten die hun weg naar de praktijk vinden.", "offices": ["Verantwoorde systemen", "Simulatie", "Menselijke factoren"] }
+  }},
+  "impact": { "eyebrow": "LIVE SYSTEEMBEELD", "title": "Van waarneming naar verantwoorde actie.", "metrics": {
+    "projectsDelivered": { "value": "01", "label": "Waarnemen" },
+    "customerPartners": { "value": "02", "label": "Begrijpen" },
+    "productsPlatforms": { "value": "03", "label": "Coördineren" },
+    "officeLocations": { "value": "04", "label": "Leren" },
+    "integratedSectors": { "value": "04", "label": "Leren" }
+  }}
+}

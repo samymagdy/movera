@@ -1,0 +1,37 @@
+{
+  "locale": "ar",
+  "direction": "rtl",
+  "fontFamily": "Avenir Next",
+  "hero": {
+    "eyebrow": "ذكاء التنقل",
+    "title": "نحوّل الذكاء إلى حركة.",
+    "desktopTitleLines": ["نحوّل الذكاء", "إلى حركة"],
+    "body": "أنظمة ذاتية ومركبات ذكية وأشخاص يحافظون على استمرار التنقل.",
+    "cta": "استكشف منظومة التنقل",
+    "imageAlt": "مركبة موفيرا ذاتية القيادة تتحرك في مدينة بلجيكية.",
+    "scrollLabel": "مرّر لتتبع مسار القرار"
+  },
+  "sectors": {
+    "deliveryAdvisory": { "title": "أنظمة القيادة الذاتية", "desktopTitleLines": ["أنظمة القيادة", "الذاتية"], "description": "طوّر الإدراك والتخطيط والتحكم لحركة أكثر أماناً." },
+    "digitalProducts": { "title": "ذكاء الأساطيل", "desktopTitleLines": ["ذكاء", "الأساطيل"], "description": "حوّل إشارات المركبات إلى قرارات قابلة للتنفيذ." },
+    "operationalIntelligence": { "title": "عمليات التنقل", "desktopTitleLines": ["عمليات", "التنقل"], "description": "نسّق المركبات والأشخاص والبنية التحتية كنظام واحد متحرك." }
+  },
+  "presence": {
+    "countries": {
+      "hub-a": { "name": "مركز أنظمة التنقل", "summary": "ذكاء المركبات", "offices": ["أنظمة القيادة الذاتية", "عمليات التنقل", "تصميم منتجات التنقل"] },
+      "hub-b": { "name": "مركز المركبات المتصلة", "description": "الإشارات خلف الحركة الذكية.", "offices": ["الإدراك", "ذكاء الأساطيل", "تجربة المركبة"] },
+      "hub-c": { "name": "مختبر الحركة المستقبلية", "description": "تجارب تنتقل إلى العالم الحقيقي.", "offices": ["الأنظمة المسؤولة", "المحاكاة", "العوامل البشرية"] }
+    }
+  },
+  "impact": {
+    "eyebrow": "رؤية النظام الحية",
+    "title": "من الإدراك إلى إجراء خاضع للمساءلة.",
+    "metrics": {
+      "projectsDelivered": { "value": "01", "label": "نرصد" },
+      "customerPartners": { "value": "02", "label": "نفهم" },
+      "productsPlatforms": { "value": "03", "label": "ننسّق" },
+      "officeLocations": { "value": "04", "label": "نتعلم" },
+      "integratedSectors": { "value": "04", "label": "نتعلم" }
+    }
+  }
+}

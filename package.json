@@ -1,0 +1,42 @@
+{
+  "name": "movera",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/contracts"
+  ],
+  "scripts": {
+    "dev": "concurrently -n WEB,ADMIN,API -c blue,magenta,green \"npm:dev:web\" \"npm:dev:admin\" \"npm:dev:api\"",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:admin": "npm --workspace apps/admin run dev",
+    "dev:api": "npm --workspace apps/api run dev",
+    "build:contracts": "tsc -p packages/contracts/tsconfig.json",
+    "db:generate": "prisma generate --schema apps/api/prisma/schema.prisma",
+    "db:migrate": "node scripts/db-migrate.mjs",
+    "db:seed": "npm --workspace apps/api run seed",
+    "media:check": "node scripts/check-media-policy.mjs",
+    "test": "npm run build:contracts && npm --workspace apps/web run lint && npm --workspace apps/admin run lint",
+    "test:e2e": "playwright test",
+    "build": "npm run build:contracts && npm run db:generate && npm --workspace apps/web run build && npm --workspace apps/admin run build && npm --workspace apps/api run build"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "$postcss",
+      "sharp": "$sharp"
+    }
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "concurrently": "^9.1.2",
+    "playwright": "^1.61.1",
+    "postcss": "^8.5.22",
+    "prisma": "^6.7.0",
+    "sharp": "^0.35.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}

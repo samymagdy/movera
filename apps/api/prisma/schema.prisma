@@ -1,0 +1,166 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ContentDocument {
+  id        String   @id
+  kind      String   @unique
+  payload   String
+  createdAt String
+  updatedAt String
+  @@index([kind])
+}
+
+model MediaAsset {
+  id        String   @id
+  url       String
+  alt       String
+  caption   String?
+  credit    String?
+  focalX    Float    @default(50)
+  focalY    Float    @default(50)
+  zoom      Float    @default(1)
+  createdAt String
+  updatedAt String
+}
+
+model ContactSubmission {
+  id             String   @id
+  name           String
+  email          String
+  phone          String?
+  company        String?
+  subject        String
+  message        String
+  locale         String
+  privacyAt      String
+  status         String   @default("new")
+  createdAt      String
+  @@index([createdAt])
+  @@index([status])
+}
+
+model NewsletterSubmission {
+  id        String   @id
+  name      String
+  email     String
+  locale    String
+  consentAt String
+  source    String
+  createdAt String
+  @@index([createdAt])
+}
+
+model CareerApplication {
+  id          String   @id
+  jobId       String
+  name        String
+  email       String
+  phone       String?
+  coverNote   String
+  cvPath      String
+  cvName      String
+  locale      String
+  createdAt   String
+  status      String   @default("new")
+  @@index([jobId])
+  @@index([createdAt])
+}
+
+model AdminUser {
+  id                 String          @id
+  email              String          @unique
+  name               String
+  passwordHash       String
+  role               String          @default("Viewer")
+  active             Boolean         @default(true)
+  forcePasswordReset Boolean         @default(false)
+  lastLoginAt        String?
+  createdAt          String
+  updatedAt          String
+  sessions           AdminSession[]
+  audits             AdminAuditEvent[]
+  @@index([role])
+  @@index([active])
+}
+
+model AdminSession {
+  id        String    @id
+  tokenHash String    @unique
+  userId    String
+  expiresAt String
+  createdAt String
+  user      AdminUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model AdminAuditEvent {
+  id        String    @id
+  userId    String
+  action    String
+  entity    String
+  entityId  String?
+  metadata  String?
+  createdAt String
+  user      AdminUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId, createdAt])
+  @@index([entity, entityId])
+}
+
+model AdminIdentitySettings {
+  id          String @id
+  localEnabled Boolean @default(true)
+  entraEnabled Boolean @default(false)
+  updatedAt   String
+}
+
+model AdminExternalIdentity {
+  id          String @id
+  provider    String
+  providerId  String
+  email       String
+  displayName String
+  role        String @default("Viewer")
+  enabled     Boolean @default(false)
+  createdAt   String
+  updatedAt   String
+  @@unique([provider, providerId])
+  @@index([email])
+}
+
+model AdminIntegrationSettings {
+  id                         String   @id
+  smtpHost                   String?
+  smtpPort                   Int?
+  smtpSecure                 Boolean  @default(true)
+  smtpUsername               String?
+  smtpSenderName             String?
+  smtpSenderEmail            String?
+  smtpTestRecipient          String?
+  smtpPasswordHash            String?
+  smtpPasswordCiphertext     String?
+  newsletterEnabled           Boolean  @default(false)
+  newsletterProvider          String?
+  newsletterEndpoint          String?
+  newsletterListId            String?
+  newsletterApiKeyHash        String?
+  newsletterApiKeyCiphertext  String?
+  recaptchaEnabled            Boolean  @default(false)
+  recaptchaSiteKey            String?
+  recaptchaSecretHash         String?
+  recaptchaSecretCiphertext   String?
+  recaptchaProtectedPaths     String?
+  redisEnabled                 Boolean  @default(false)
+  redisUrl                     String?
+  redisUsername                String?
+  redisDatabase                Int?
+  redisPasswordHash            String?
+  redisPasswordCiphertext      String?
+  updatedAt                  String
+}

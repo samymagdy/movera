@@ -1,0 +1,88 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: company_content
+      POSTGRES_USER: company
+      POSTGRES_PASSWORD: company_dev_only
+    ports: ["5432:5432"]
+    volumes: [company-postgres:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U company -d company_content"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports: ["6379:6379"]
+    volumes: [company-redis:/data]
+    command: ["redis-server", "--appendonly", "yes"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  api:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://company:company_dev_only@postgres:5432/company_content?schema=public
+      REDIS_URL: redis://redis:6379
+      PUBLIC_SITE_CACHE_TTL_SECONDS: ${PUBLIC_SITE_CACHE_TTL_SECONDS:-60}
+      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:3000}
+      ADMIN_ORIGIN: ${ADMIN_ORIGIN:-http://localhost:3001}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+      NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:-http://localhost:4000}
+      INTEGRATION_SECRET_KEY: ${INTEGRATION_SECRET_KEY:?set a local integration key}
+      ADMIN_BOOTSTRAP_EMAIL: ${ADMIN_BOOTSTRAP_EMAIL:-admin@movera.local}
+      ADMIN_BOOTSTRAP_NAME: ${ADMIN_BOOTSTRAP_NAME:-admin}
+      ADMIN_BOOTSTRAP_PASSWORD: ${ADMIN_BOOTSTRAP_PASSWORD:?set an admin bootstrap password}
+    ports: ["4000:4000"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+    volumes: [company-uploads:/app/storage/uploads, company-private:/app/storage/private]
+  web:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+      args:
+        NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:-http://localhost:4000}
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+        INTERNAL_API_BASE_URL: ${INTERNAL_API_BASE_URL:-http://api:4000}
+        ADMIN_ORIGIN: ${ADMIN_ORIGIN:-http://localhost:3001}
+    environment:
+      NODE_ENV: production
+      INTERNAL_API_BASE_URL: ${INTERNAL_API_BASE_URL:-http://api:4000}
+      ADMIN_ORIGIN: ${ADMIN_ORIGIN:-http://localhost:3001}
+      NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:-http://localhost:4000}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+    ports: ["3000:3000"]
+    depends_on: [api]
+  admin:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.admin
+      args:
+        NEXT_PUBLIC_ADMIN_API_BASE_URL: ${NEXT_PUBLIC_ADMIN_API_BASE_URL:-http://localhost:4000}
+        NEXT_PUBLIC_PUBLIC_SITE_URL: ${NEXT_PUBLIC_PUBLIC_SITE_URL:-http://localhost:3000}
+        INTERNAL_PUBLIC_SITE_URL: ${INTERNAL_PUBLIC_SITE_URL:-http://web:3000}
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_ADMIN_API_BASE_URL: ${NEXT_PUBLIC_ADMIN_API_BASE_URL:-http://localhost:4000}
+      NEXT_PUBLIC_PUBLIC_SITE_URL: ${NEXT_PUBLIC_PUBLIC_SITE_URL:-http://localhost:3000}
+      INTERNAL_PUBLIC_SITE_URL: ${INTERNAL_PUBLIC_SITE_URL:-http://web:3000}
+    ports: ["3001:3001"]
+    depends_on: [api]
+volumes:
+  company-postgres:
+  company-redis:
+  company-uploads:
+  company-private:

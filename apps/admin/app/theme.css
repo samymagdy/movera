@@ -1,0 +1,399 @@
+/* Light mode component layer. The editor uses many intentionally dark base
+   declarations, so map every working surface and control explicitly. */
+html[data-theme="light"] .admin-shell,
+html[data-theme="light"] .admin-main { background: #f4f8fc; color: #10263d; }
+html[data-theme="light"] .admin-sidebar { border-color: #c1d3e1; box-shadow: 8px 0 24px rgba(35, 78, 110, .05); }
+html[data-theme="light"] .admin-sidebar nav button { color: #4f6981; }
+html[data-theme="light"] .admin-sidebar nav button span { color: #3984aa; }
+html[data-theme="light"] .admin-sidebar nav button:hover { color: #0b5178; background: rgba(16, 131, 196, .1); }
+html[data-theme="light"] .admin-sidebar nav button.active { color: #075b84; background: linear-gradient(100deg, rgba(14,128,210,.16), rgba(11,46,77,.04)); }
+html[data-theme="light"] .side-kicker,
+html[data-theme="light"] .sidebar-note,
+html[data-theme="light"] .account small,
+html[data-theme="light"] .account button { color: #6b8399; }
+html[data-theme="light"] .account strong { color: #173a58; }
+html[data-theme="light"] .admin-header { background: rgba(255,255,255,.92); border-color: #c1d3e1; box-shadow: 0 4px 20px rgba(35,78,110,.04); }
+html[data-theme="light"] .admin-header h1,
+html[data-theme="light"] .workspace-intro h2,
+html[data-theme="light"] .settings-placeholder h2 { color: #10263d; }
+html[data-theme="light"] .notice,
+html[data-theme="light"] .muted-label,
+html[data-theme="light"] .toolbar-meta,
+html[data-theme="light"] .workspace-intro p:not(.eyebrow) { color: #607b93; }
+html[data-theme="light"] .public-link { color: #087da9; }
+
+html[data-theme="light"] .content-index,
+html[data-theme="light"] .editor-pane,
+html[data-theme="light"] .empty-editor,
+html[data-theme="light"] .workspace-intro,
+html[data-theme="light"] .settings-panel,
+html[data-theme="light"] .policy-panel,
+html[data-theme="light"] .identity-list,
+html[data-theme="light"] .audit-panel,
+html[data-theme="light"] .modal,
+html[data-theme="light"] .preview-frame { background: #fff; border-color: #bfd2df; box-shadow: 0 12px 34px rgba(35,78,110,.07); }
+html[data-theme="light"] .content-index h2,
+html[data-theme="light"] .editor-pane h2,
+html[data-theme="light"] .panel-title h3,
+html[data-theme="light"] .structured-editor-heading h3 { color: #10263d; }
+html[data-theme="light"] .section-copy,
+html[data-theme="light"] .panel-title p,
+html[data-theme="light"] .settings-placeholder>p:last-child,
+html[data-theme="light"] .structured-heading-note,
+html[data-theme="light"] .field small { color: #607b93; }
+html[data-theme="light"] .content-entry,
+html[data-theme="light"] .user-row,
+html[data-theme="light"] .identity-row,
+html[data-theme="light"] .component-row,
+html[data-theme="light"] .metric { border-color: #d5e2ea; color: #4f6981; }
+html[data-theme="light"] .content-entry-main { color: #294c68; }
+html[data-theme="light"] .content-entry-main:hover,
+html[data-theme="light"] .content-entry:hover,
+html[data-theme="light"] .content-entry.selected { color: #075b84; background: #eaf5fa; }
+html[data-theme="light"] .entry-copy strong,
+html[data-theme="light"] .user-identity strong,
+html[data-theme="light"] .identity-row strong,
+html[data-theme="light"] .component-row span:first-child,
+html[data-theme="light"] .metric strong,
+html[data-theme="light"] .structured-card-heading { color: #173a58; }
+html[data-theme="light"] .entry-copy small,
+html[data-theme="light"] .user-identity small,
+html[data-theme="light"] .identity-row small,
+html[data-theme="light"] .metric span { color: #6b8399; }
+html[data-theme="light"] .status-tag,
+html[data-theme="light"] .role-pill { color: #087da9; }
+html[data-theme="light"] .status-tag.published { background: #dff5ed; color: #08764f; }
+html[data-theme="light"] .entry-order-action,
+html[data-theme="light"] .icon-action,
+html[data-theme="light"] .secondary-action { color: #365d78; border-color: #9dbbcd; background: #f5fafc; }
+html[data-theme="light"] .entry-order-action:hover:not(:disabled),
+html[data-theme="light"] .icon-action:hover,
+html[data-theme="light"] .secondary-action:hover { color: #075b84; background: #e7f4fa; border-color: #36a8d5; }
+
+html[data-theme="light"] .field>span,
+html[data-theme="light"] .field-label { color: #536d85; }
+html[data-theme="light"] .field input,
+html[data-theme="light"] .field textarea,
+html[data-theme="light"] .field select,
+html[data-theme="light"] .search-control,
+html[data-theme="light"] .search-control input,
+html[data-theme="light"] .locale-tabs,
+html[data-theme="light"] .template-picker-trigger,
+html[data-theme="light"] .admin-select { color: #173a58; background: #fff; border-color: #abc5d5; }
+html[data-theme="light"] .field input::placeholder,
+html[data-theme="light"] .field textarea::placeholder,
+html[data-theme="light"] .search-control input::placeholder { color: #7890a3; }
+html[data-theme="light"] .field input:focus,
+html[data-theme="light"] .field textarea:focus,
+html[data-theme="light"] .field select:focus,
+html[data-theme="light"] .search-control:focus-within { border-color: #078fca; box-shadow: 0 0 0 3px rgba(7,143,202,.12); }
+html[data-theme="light"] .locale-tabs button { color: #5b758c; }
+html[data-theme="light"] .locale-tabs button.active { color: #075b84; background: #dff2fa; }
+html[data-theme="light"] .template-picker-menu { background: #fff; border-color: #abc5d5; box-shadow: 0 18px 45px rgba(35,78,110,.18); }
+html[data-theme="light"] .template-picker-menu button { color: #365d78; }
+html[data-theme="light"] .template-picker-menu button:hover,
+html[data-theme="light"] .template-picker-menu button.selected { color: #075b84; background: #e7f4fa; }
+html[data-theme="light"] .media-large,
+html[data-theme="light"] .structured-card,
+html[data-theme="light"] .structured-empty { background: #edf5f9; border-color: #bfd2df; }
+html[data-theme="light"] .structured-card-heading span,
+html[data-theme="light"] .structured-empty { color: #607b93; }
+html[data-theme="light"] .media-editor,
+html[data-theme="light"] .editable-surface { border-color: #bfd2df; background: #f8fbfd; }
+html[data-theme="light"] .settings-subnav { background: #e8f3f8; border-color: #bfd2df; }
+html[data-theme="light"] .settings-subnav button { color: #536d85; }
+html[data-theme="light"] .settings-subnav button.active { color: #073455; }
+html[data-theme="light"] .appearance-choice { background: #f8fbfd; border-color: #bfd2df; }
+html[data-theme="light"] .appearance-choice strong { color: #173a58; }
+html[data-theme="light"] .appearance-choice small { color: #607b93; }
+html[data-theme="light"] .component-head,
+html[data-theme="light"] .user-list-head { background: #e3eef5; color: #5d7890; }
+html[data-theme="light"] .component-table,
+html[data-theme="light"] .user-list { border-color: #bfd2df; }
+html[data-theme="light"] .modal-backdrop { background: rgba(19,48,72,.38); }
+html[data-theme="light"] .modal h2,
+html[data-theme="light"] .modal h3 { color: #10263d; }
+html[data-theme="light"] .audit-row { border-color: #d5e2ea; }
+html[data-theme="light"] .audit-row strong { color: #294c68; }
+html[data-theme="light"] .login-panel { background: linear-gradient(150deg,#fff,#edf5fa); border-color: #bfd2df; }
+html[data-theme="light"] .login-panel h1 { color: #10263d; }
+html[data-theme="light"] .login-copy,
+html[data-theme="light"] .login-foot { color: #607b93; }
+
+/* Final light-mode polish: no dark-theme surfaces or low-contrast copy remain
+   in the editor shell, settings workspaces, or admin data tables. */
+html[data-theme="light"] .metric {
+  background: #e3eef5;
+  border-color: #bfd2df;
+}
+
+html[data-theme="light"] .metric strong { color: #173a58; }
+html[data-theme="light"] .metric span { color: #607b93; }
+
+html[data-theme="light"] .settings-subnav {
+  background: #e8f3f8;
+  border-color: #bfd2df;
+}
+
+html[data-theme="light"] .settings-subnav button { color: #536d85; }
+html[data-theme="light"] .settings-subnav button:hover {
+  color: #0f5c91;
+  background: #dcecf4;
+}
+
+html[data-theme="light"] .settings-subnav button.active {
+  color: #0f5c91;
+  background: #d6ebf5;
+  box-shadow: inset 0 0 0 1px #8cc8e5;
+}
+
+html[data-theme="light"] .media-large,
+html[data-theme="light"] .structured-card {
+  background: #edf5f9;
+}
+
+html[data-theme="light"] .media-large:before {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 35%, rgba(217,233,241,.58));
+}
+
+html[data-theme="light"] .media-large span { color: #294c68; }
+
+html[data-theme="light"] .panel-icon,
+html[data-theme="light"] .appearance-choice-icon {
+  color: #0f6d9e;
+  border-color: #8cc8e5;
+  background: #eef8fc;
+}
+
+html[data-theme="light"] .admin-brand-ai {
+  min-width: 0;
+  padding-inline: 6px;
+  color: #0f5c91;
+  border-color: #70a7bf;
+  background: #e8f6fb;
+  text-shadow: none;
+  box-shadow: 0 0 0 1px rgba(23,105,164,.12), 0 4px 12px rgba(23,105,164,.12);
+  animation: none;
+}
+
+html[data-theme="light"] .avatar,
+html[data-theme="light"] .entry-thumb {
+  color: #0f6d9e;
+  border-color: #8cc8e5;
+  background-color: #e8f4f9;
+}
+
+html[data-theme="light"] .locked-pill {
+  color: #0f5c91;
+  border-color: #7ea9bf;
+  background: #f4f9fc;
+}
+
+/* Keep the CMS on the same light-mode accent system as the public platform. */
+html[data-theme="light"] {
+  --cyan: #1769a4;
+  --blue: #1769a4;
+}
+
+html[data-theme="light"] .eyebrow,
+html[data-theme="light"] .public-link,
+html[data-theme="light"] .text-action,
+html[data-theme="light"] .upload-control b,
+html[data-theme="light"] .template-picker-chevron,
+html[data-theme="light"] .entry-arrow,
+html[data-theme="light"] .panel-icon,
+html[data-theme="light"] .appearance-choice-icon,
+html[data-theme="light"] .empty-orbit,
+html[data-theme="light"] .admin-sidebar nav button span,
+html[data-theme="light"] .admin-sidebar nav button.active span {
+  color: #1769a4;
+}
+
+html[data-theme="light"] .entry-order-action,
+html[data-theme="light"] .icon-action,
+html[data-theme="light"] .secondary-action,
+html[data-theme="light"] .structured-order-actions .secondary-action {
+  color: #0f5c91;
+  border-color: #8fb8cf;
+}
+
+html[data-theme="light"] .entry-order-action:hover:not(:disabled),
+html[data-theme="light"] .icon-action:hover,
+html[data-theme="light"] .secondary-action:hover {
+  color: #0a4b70;
+  border-color: #1769a4;
+  background: #e7f2f8;
+}
+
+html[data-theme="light"] .publish-action {
+  color: #0f5c91;
+  background: #e5f2f8;
+  border-color: #83b0c9;
+}
+
+/* Neutral light mode: keep the editor white and calm, with navy controls and
+   separators instead of the blue-tinted dark-theme surfaces. */
+html[data-theme="light"] {
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --panel-2: #ffffff;
+  --line: #d5dde5;
+  --line-soft: rgba(11, 42, 71, .14);
+  --text: #102a43;
+  --muted: #536578;
+  --dim: #718092;
+  --cyan: #0b3558;
+  --blue: #0b3558;
+}
+
+html[data-theme="light"] .admin-shell,
+html[data-theme="light"] .admin-main,
+html[data-theme="light"] .workspace,
+html[data-theme="light"] .admin-header,
+html[data-theme="light"] .admin-sidebar,
+html[data-theme="light"] .login-screen,
+html[data-theme="light"] .login-panel {
+  background: #ffffff;
+}
+
+html[data-theme="light"] .admin-sidebar,
+html[data-theme="light"] .admin-header,
+html[data-theme="light"] .settings-subnav,
+html[data-theme="light"] .content-index,
+html[data-theme="light"] .editor-pane,
+html[data-theme="light"] .empty-editor,
+html[data-theme="light"] .workspace-intro,
+html[data-theme="light"] .settings-panel,
+html[data-theme="light"] .policy-panel,
+html[data-theme="light"] .identity-list,
+html[data-theme="light"] .modal,
+html[data-theme="light"] .appearance-choice,
+html[data-theme="light"] .structured-card,
+html[data-theme="light"] .structured-empty,
+html[data-theme="light"] .media-large,
+html[data-theme="light"] .component-table,
+html[data-theme="light"] .user-list,
+html[data-theme="light"] .search-control,
+html[data-theme="light"] .locale-tabs,
+html[data-theme="light"] .template-picker-trigger,
+html[data-theme="light"] .field input,
+html[data-theme="light"] .field textarea,
+html[data-theme="light"] .field select {
+  background: #ffffff;
+  border-color: #d5dde5;
+  box-shadow: none;
+}
+
+html[data-theme="light"] .admin-sidebar { border-right-color: #d5dde5; }
+html[data-theme="light"] .admin-header { border-bottom-color: #d5dde5; }
+html[data-theme="light"] .admin-sidebar nav button,
+html[data-theme="light"] .content-entry,
+html[data-theme="light"] .content-entry-main,
+html[data-theme="light"] .user-row,
+html[data-theme="light"] .component-row,
+html[data-theme="light"] .notice,
+html[data-theme="light"] .sidebar-note,
+html[data-theme="light"] .account strong,
+html[data-theme="light"] .entry-copy strong,
+html[data-theme="light"] .component-row span:first-child,
+html[data-theme="light"] .user-identity strong,
+html[data-theme="light"] .admin-header h1,
+html[data-theme="light"] .panel-title h3,
+html[data-theme="light"] .structured-card-heading,
+html[data-theme="light"] .appearance-choice strong,
+html[data-theme="light"] .modal h2,
+html[data-theme="light"] .modal h3 {
+  color: #102a43;
+}
+
+html[data-theme="light"] .admin-sidebar nav button:hover,
+html[data-theme="light"] .admin-sidebar nav button.active,
+html[data-theme="light"] .content-entry:hover,
+html[data-theme="light"] .content-entry.selected,
+html[data-theme="light"] .content-entry-main:hover,
+html[data-theme="light"] .appearance-choice:hover,
+html[data-theme="light"] .appearance-choice.active,
+html[data-theme="light"] .settings-subnav button:hover,
+html[data-theme="light"] .settings-subnav button.active {
+  color: #0b3558;
+  background: #f7f8fa;
+  box-shadow: none;
+}
+
+html[data-theme="light"] .settings-subnav button,
+html[data-theme="light"] .field>span,
+html[data-theme="light"] .field small,
+html[data-theme="light"] .panel-title p,
+html[data-theme="light"] .section-copy,
+html[data-theme="light"] .workspace-intro p:not(.eyebrow),
+html[data-theme="light"] .component-row,
+html[data-theme="light"] .entry-copy small,
+html[data-theme="light"] .setting-check,
+html[data-theme="light"] .protected-paths,
+html[data-theme="light"] .appearance-choice small,
+html[data-theme="light"] .toggle-row small,
+html[data-theme="light"] .integration-note {
+  color: #536578;
+}
+
+html[data-theme="light"] .component-head,
+html[data-theme="light"] .user-list-head { background: #ffffff; color: #536578; }
+html[data-theme="light"] .panel-icon,
+html[data-theme="light"] .appearance-choice-icon,
+html[data-theme="light"] .admin-sidebar nav button span,
+html[data-theme="light"] .admin-sidebar nav button.active span,
+html[data-theme="light"] .entry-arrow,
+html[data-theme="light"] .text-action,
+html[data-theme="light"] .upload-control b,
+html[data-theme="light"] .template-picker-chevron,
+html[data-theme="light"] .empty-orbit {
+  color: #0b3558;
+}
+
+html[data-theme="light"] .panel-icon,
+html[data-theme="light"] .appearance-choice-icon,
+html[data-theme="light"] .avatar,
+html[data-theme="light"] .entry-thumb,
+html[data-theme="light"] .admin-theme-toggle--light {
+  background: #ffffff;
+  border-color: rgba(11, 42, 71, .38);
+  box-shadow: none;
+}
+
+html[data-theme="light"] .admin-brand-ai {
+  color: #0b3558;
+  background: #ffffff;
+  border-color: rgba(11, 42, 71, .38);
+  box-shadow: none;
+}
+
+html[data-theme="light"] .admin-theme-toggle--light { color: #0b3558; }
+html[data-theme="light"] .admin-theme-toggle--light>i { background: #0b3558; box-shadow: none; }
+html[data-theme="light"] .branding-media-grid { background: #ffffff; }
+
+.branding-media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; }
+@media (max-width: 980px) { .branding-media-grid { grid-template-columns: 1fr; } }
+
+@media (min-width: 761px) and (max-width: 1320px) {
+  .admin-header { padding-inline: 28px; }
+  .workspace { padding-inline: 28px; }
+  .editor-layout { grid-template-columns: minmax(255px, .72fr) minmax(0, 1.55fr); }
+}
+
+/* Keep admin copy readable without making workspace headings dominate the
+   screen. */
+.admin-header h1 { font-size: 24px; }
+.workspace-intro h2 { font-size: 24px; }
+.index-head h2,
+.pane-head h2 { font-size: 20px; }
+.admin-sidebar nav button { font-size: 13px; }
+.field > span { font-size: 11px; }
+.field input,
+.field textarea,
+.field select,
+.search-control input { font-size: 13px; }
+.section-copy,
+.workspace-intro p:not(.eyebrow),
+.panel-title p { font-size: 13px; }
+.content-entry,
+.user-row { font-size: 12px; }

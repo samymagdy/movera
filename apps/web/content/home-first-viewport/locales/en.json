@@ -1,0 +1,49 @@
+{
+  "locale": "en",
+  "direction": "ltr",
+  "fontFamily": "Avenir Next",
+  "hero": {
+    "eyebrow": "MOBILITY INTELLIGENCE",
+    "title": "Move intelligence into motion.",
+    "desktopTitleLines": ["Move intelligence", "into motion"],
+    "body": "Autonomous systems, intelligent vehicles, and the people who keep mobility moving.",
+    "cta": "Explore the mobility stack",
+    "imageAlt": "An autonomous MOVERA shuttle moving through a Belgian city.",
+    "scrollLabel": "Scroll to follow the decision path"
+  },
+  "sectors": {
+    "deliveryAdvisory": {
+      "title": "Autonomy Systems",
+      "desktopTitleLines": ["Autonomy", "Systems"],
+      "description": "Engineer perception, planning, and control for safer movement."
+    },
+    "digitalProducts": {
+      "title": "Fleet Intelligence",
+      "desktopTitleLines": ["Fleet", "Intelligence"],
+      "description": "Turn vehicle signals into decisions people can act on."
+    },
+    "operationalIntelligence": {
+      "title": "Mobility Operations",
+      "desktopTitleLines": ["Mobility", "Operations"],
+      "description": "Coordinate vehicles, people, and infrastructure as one moving system."
+    }
+  },
+  "presence": {
+    "countries": {
+      "hub-a": { "name": "Mobility Systems Hub", "summary": "Vehicle intelligence", "offices": ["Autonomy systems", "Mobility operations", "Mobility product design"] },
+      "hub-b": { "name": "Connected Vehicle Hub", "description": "The signals behind intelligent movement.", "offices": ["Perception", "Fleet intelligence", "Vehicle experience"] },
+      "hub-c": { "name": "Future Motion Lab", "description": "Experiments that can move into the real world.", "offices": ["Responsible intelligence", "Simulation", "Human factors"] }
+    }
+  },
+  "impact": {
+    "eyebrow": "LIVE SYSTEM VIEW",
+    "title": "From perception to accountable action.",
+    "metrics": {
+      "projectsDelivered": { "value": "01", "label": "Perceive" },
+      "customerPartners": { "value": "02", "label": "Understand" },
+      "productsPlatforms": { "value": "03", "label": "Coordinate" },
+      "officeLocations": { "value": "04", "label": "Learn" },
+      "integratedSectors": { "value": "04", "label": "Learn" }
+    }
+  }
+}

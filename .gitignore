@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Framework and compiler output
+.next/
+**/.next/
+dist/
+**/dist/
+coverage/
+*.tsbuildinfo
+
+# Tests and reports
+test-results/
+playwright-report/
+blob-report/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Runtime databases and private media
+data/
+storage/
+uploads/
+private/
+*.db
+*.db-journal
+*.dump
+*.sql.gz
+
+# Deployment artifacts and local indexes
+.deploy/
+.codebase-memory/
+initial_backip/
+
+# Local visual QA artifacts
+/buttons-glass-final.png
+/glass-logo-check.png
+/glass-overlay-top.png
+/glass-transparent-logo-check.png
+/top-glass-current.png
+
+# Logs and package-manager diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vs/
+.vscode/*.log

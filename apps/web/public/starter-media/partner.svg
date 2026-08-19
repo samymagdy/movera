@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" role="img" aria-labelledby="title">
+  <title id="title">Partner placeholder</title>
+  <rect x="4" y="4" width="412" height="172" rx="16" fill="#102b42" stroke="#55d6c2" stroke-width="4"/>
+  <path d="M80 116 130 58l50 58M185 116l50-58 50 58M290 116l25-30 25 30" fill="none" stroke="#eef8f6" stroke-width="12"/>
+</svg>

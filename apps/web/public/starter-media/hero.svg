@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract operational network</title>
+  <desc id="desc">A neutral geometric network illustration for the starter website.</desc>
+  <rect width="1600" height="900" fill="#07111f"/>
+  <path d="M0 690H1600M0 760H1600M0 830H1600M160 0V900M320 0V900M480 0V900M640 0V900M800 0V900M960 0V900M1120 0V900M1280 0V900M1440 0V900" stroke="#17334d" stroke-width="2" opacity=".8"/>
+  <path d="M0 650 245 505 470 590 720 300 930 420 1180 190 1600 390M140 790 420 640 650 710 890 540 1110 650 1400 480 1600 570" fill="none" stroke="#55d6c2" stroke-width="7" opacity=".85"/>
+  <path d="M720 300 720 900M1180 190 1180 900M470 590 470 900" stroke="#55d6c2" stroke-width="2" opacity=".45"/>
+  <g fill="#eef8f6" stroke="#55d6c2" stroke-width="5">
+    <circle cx="245" cy="505" r="14"/><circle cx="470" cy="590" r="14"/><circle cx="720" cy="300" r="14"/><circle cx="930" cy="420" r="14"/><circle cx="1180" cy="190" r="14"/><circle cx="1400" cy="480" r="14"/>
+  </g>
+  <path d="M1000 0 1600 0 1600 900 1320 900Z" fill="#102b42" opacity=".72"/>
+  <path d="M1080 0 1600 0 1600 130 1080 130ZM1240 180 1600 180 1600 310 1240 310ZM1080 360 1600 360 1600 490 1080 490ZM1240 540 1600 540 1600 670 1240 670ZM1080 720 1600 720 1600 850 1080 850Z" fill="#1c5360" opacity=".45"/>
+</svg>
